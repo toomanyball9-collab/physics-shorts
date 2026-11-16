@@ -13,16 +13,22 @@ Accounts: TikTok `toomanyball`, Instagram `toomanyball9`, YouTube Shorts channel
 - Clear rising tension in the last ~10 s (ring reddening, shaking, near-full), then a satisfying payoff (burst/release).
 - First 2 seconds must already be interesting (motion + sound immediately, no empty intro).
 - Short tail after the payoff (1–3 s) that fades back toward the opening look so the video loops nicely on replay.
-- Artistic, polished look: rich dark gradient backgrounds, glowing arena outline, harmonious palettes (vary per video: neon, pastel, sunset, ocean, monochrome + accent, etc.).
+- Artistic, delicate, NEON look — always render with `neon.py` (see `concepts/2026-11-17_neon_reference.py`):
+  - near-black gradient background with vignette (`neon.background`), or `neon.fade` for light trails
+  - neon-tube arena outline with layered additive glow (`neon.ring` / `neon.polygon_ring`), heating to red before a burst
+  - every ball = soft additive glow halo + glossy core (bright centre, coloured body, thin bright rim, small specular) via `neon.BallSprites`
+  - harmonious palettes from `neon.PALETTES` (synthwave, aurora, sunset, ocean, spectrum, mono-ice) — vary per video, 3–7 colours max, never random rainbow noise unless the concept is "spectrum"
+  - small details: sparkles on hits/bursts (`neon.sparkles`), shockwave ring, fragments glowing as they fly
 - On-screen text: NO title/hook text, NO "BOOM"/"POP" text, NO "N reached!" banners. The only allowed text is a live counter number near the bottom (optional).
 - Ball speed moderate (~450–600 px/s). No gravity unless the concept needs it.
 - When the concept fills a container, it must end only when the container is *completely, visibly packed* (use real ball–ball collisions so balls stack, not overlap). Then the container bursts: brief white flash, shockwave ring, container fragments flying out, balls spreading outward.
 - The hook comes from the rule itself and the growing tension (ring turning red and shaking as it nears full).
 
-## Sound
-- Quiet and pleasant: peak about -6 dBFS, never harsh.
-- Musical, not plain beeps: an original chord loop (soft pad + bass) underneath, and each event (split/hit/cut) plays the next note of an arpeggio over the current chord, so dense moments become fast arpeggios.
-- Burst = soft low thump + bright chord swell. Never use existing songs.
+## Sound — always use `music.py`
+- It must feel like music, not beeps: `music.Song` snaps every event to a tempo grid (16ths), picks notes from the current chord with an arpeggio pattern, and lays them over a soft pad + marimba bass, with soft hats arriving as the build rises, ping-pong delay and reverb.
+- Vary per video: bpm (80–118), key, mode (major/minor/dorian/lydian/mixolydian), progression (`music.PROGRESSIONS`), lead voice (pluck, bell, marimba, ep).
+- Big moments: `song.accent(t)` (soft low thump + bright chord swell).
+- Quiet and pleasant: render peaks at -6 dBFS (default). Never use existing songs or melodies.
 
 ## Concept mix (lean on what works, but stay balanced)
 - Before choosing, check recent performance in Metricool analytics (views, likes, comments, average watch time if available) for the last 7–14 days and record it in concepts.md.
