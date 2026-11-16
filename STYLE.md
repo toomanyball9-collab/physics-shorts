@@ -56,6 +56,31 @@ Families (use the family name in concepts.md):
 - trails: balls leave fading light trails that paint spirals / spectrum art
 - spawner-plays-melody: every bounce plays the next note of an ORIGINAL melody, speeding up as balls multiply
 - newtons-cradle / chain reactions: dominoes of balls, cascades, sand-like ball piles
+## Seasonal themes (check the PUBLISH date, KST)
+A theme is a layer on top of any concept family: ball skin (`neon.SkinSprites(..., skin=...)`), palette, music mood, plus a matching hashtag/caption line. Physics stays the same. Fixed dates below; for movable dates (Lunar New Year, Easter, Mid-Autumn/Chuseok, US Thanksgiving, Diwali…) verify the exact date with a quick web search for that year.
+| Window | Theme | Skin(s) | Palette / music |
+|---|---|---|---|
+| Dec 29 – Jan 2 | New Year | firework, star | gold + white (mono-ice, gold accent); bright major, bell lead |
+| Lunar New Year ±3 days (2027-02-06) | Lunar New Year | lantern, firework | red + gold; major pentatonic feel, pluck/bell |
+| Feb 10 – 14 | Valentine's | heart | pink/red (synthwave/sunset); slow ep, major |
+| Mar 15 – 17 | St. Patrick's | clover | greens (aurora); bright major, marimba |
+| Easter ±3 days (2027-03-28) | Easter | egg | pastels; light major, marimba/pluck |
+| Mar 25 – Apr 15 | Spring blossom | blossom | soft pink/white; lydian, ep/bell |
+| Apr 22 | Earth Day | earth | ocean; calm major, bell |
+| Jul – Aug (max 1/week) | Summer | beachball | sunset/ocean; upbeat 110–118 bpm, marimba |
+| Mid-Autumn/Chuseok ±2 days (2027-09-15) | Full moon | moon, lantern | deep blue + gold; dorian, bell |
+| Oct 1 – 23 (max 2/week) | Autumn | leaf | sunset; mellow minor, ep |
+| Oct 24 – 31 (daily on Oct 31) | Halloween | pumpkin | orange + purple; minor/dorian, marimba/bell, a little spooky |
+| US Thanksgiving week (2026-11-26) | Thanksgiving | leaf | warm sunset; cosy major, ep |
+| Dec 1 – 19 (every 2–3 days) | Christmas season | snowflake, ornament, star | red/green/gold or mono-ice; bell lead, major/lydian |
+| Dec 20 – 26 (daily) | Christmas | ornament, snowflake, star | same, strongest on Dec 24–25 |
+| Dec – Feb other days (max 1/week) | Winter | snowflake | mono-ice; calm |
+On non-theme days use the default `orb` skin. Theme days do not count against the concept-family balance rules. Never use characters, logos or brands.
+
+## Music must be different every time
+- Log the music settings in concepts.md (bpm, key, mode, progression, lead).
+- Never reuse the same combination of key + mode + progression + lead within 30 days, and change at least two of them from the previous video. Vary bpm by at least 6 from the previous video.
+
 ## Posting
 - Metricool brand blogId `8158935`, timezone Asia/Seoul. Publish 08:00 KST.
 - One scheduled post per network so hashtags differ:
