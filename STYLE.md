@@ -24,12 +24,12 @@ Accounts: TikTok `toomanyball`, Instagram `toomanyball9`, YouTube Shorts channel
 - When the concept fills a container, it must end only when the container is *completely, visibly packed* (use real ball–ball collisions so balls stack, not overlap). Then the container bursts: brief white flash, shockwave ring, container fragments flying out, balls spreading outward.
 - The hook comes from the rule itself and the growing tension (ring turning red and shaking as it nears full).
 
-## Sound — always use `music.py`
-- It must feel like music, not beeps: `music.Song` snaps every event to a tempo grid (16ths), picks notes from the current chord with an arpeggio pattern, and lays them over a soft pad + marimba bass, with soft hats arriving as the build rises, ping-pong delay and reverb.
-- Vary per video: bpm (80–118), key, mode (major/minor/dorian/lydian/mixolydian), progression (`music.PROGRESSIONS`), lead voice (pluck, bell, marimba, ep).
-- Big moments: `song.accent(t)` (soft low thump + bright chord swell).
+## Sound — music is the hero; always use `music.py`
+- Pick the music with `music.random_song(seed, avoid=recent_recipes, ...)` or `music.Song.from_genre(<genre>, seed)`. 20 genres are built in (lofi, synthwave, ambient, musicbox, chiptune, citypop, bossa, cinematic, celtic, japanese, desert, kpop_bright, jazzhop, dreamwave, waltz, gamelan, trance_lite, tropical, lullaby, space); each randomises bpm, key, mode, progression, chord voicing, lead instrument (14 voices), melody style (arp / motif / walk / call-and-response), melody scale (incl. pentatonic, in, hirajoshi, whole-tone, blues), drums, texture, 3/4 or 4/4, swing and an optional key lift at the climax.
+- Events are snapped to the tempo grid and harmonised, so dense moments become fast melodies, never noise. Drums and texture arrive as the build rises — pass a `build` curve that matches the visual tension.
+- Land the payoff on the beat: when the burst/climax condition is met, trigger it at `song.next_bar(t)` and call `song.accent(...)` there.
 - Quiet and pleasant: render peaks at -6 dBFS (default). Never use existing songs or melodies.
-
+- Theme days pick a fitting genre: New Year → kpop_bright/trance_lite; Lunar New Year → gamelan; Valentine's → citypop/lofi; St. Patrick's → celtic; Easter → lullaby; Earth Day → ambient; Chuseok → japanese/ambient; Halloween → desert/cinematic (minor); Thanksgiving → bossa/jazzhop; Christmas → musicbox/waltz.
 ## Concept mix (lean on what works, but stay balanced)
 - Before choosing, check recent performance in Metricool analytics (views, likes, comments, average watch time if available) for the last 7–14 days and record it in concepts.md.
 - Over any 7 days: about half the videos may be variations of the best-performing concept families; the other half must be different families (new ideas or rotating older ones).
@@ -73,9 +73,10 @@ A theme is a layer on top of any concept family: ball skin (`neon.SkinSprites(..
 Every other day uses the default `orb` skin. Theme days do not count against the concept-family balance rules. Never use characters, logos or brands.
 
 ## Music must be different every time
-- Log the music settings in concepts.md (bpm, key, mode, progression, lead).
-- Never reuse the same combination of key + mode + progression + lead within 30 days, and change at least two of them from the previous video. Vary bpm by at least 6 from the previous video.
-
+- Log `song.recipe_str()` in the Music column of concepts.md.
+- Never reuse a genre that appears in the last 7 videos; never repeat the same genre + key + mode + lead within 30 days (`random_song` enforces both when you pass the recent recipes).
+- Change at least two of bpm / key / mode / lead vs the previous video and keep bpm at least 6 away.
+- If a genre clearly performs well, it may come back after 7 days, with a different key, mode and lead.
 ## Posting
 - Metricool brand blogId `8158935`, timezone Asia/Seoul. Publish 08:00 KST.
 - One scheduled post per network so hashtags differ:
