@@ -31,16 +31,25 @@ Accounts: TikTok `toomanyball`, Instagram `toomanyball9`, YouTube Shorts channel
 - A "variation" must still look clearly new (different arena, palette, twist on the rule).
 
 ## Concept ideas (rotate, never repeat back-to-back; log every one in concepts.md)
-- Wall hit doubles the ball (done 2026-11-17)
-- Wall hit triples / x1.5 growth
-- A line slices across the circle; every cut doubles the pieces
-- Escape: circle with a rotating gap, balls that escape spawn 2 more
-- Shrinking arena while balls multiply
-- Color teams race to fill the arena
-- Square / hexagon / star arena variants
-- Spiral or concentric rings that break one by one
-- Balls leave fading light trails that paint the frame
-
+Families (use the family name in concepts.md):
+- wall-split: wall hit doubles / triples / x1.5 the ball (done 2026-11-17)
+- escape: concentric rotating rings with gaps; each ring breaks with a chord when a ball gets out; escaped balls may spawn 2 more
+- ring-break: ball breaks layer after layer of a regenerating wall ("will it escape?")
+- shrinking-arena: arena shrinks while balls multiply or grow
+- growing-ball: each bounce makes the ball bigger/faster until it fills the arena
+- spinning-shape: balls inside a rotating hexagon / triangle / star / square
+- slicer: a line sweeps or cuts across the circle; every cut doubles the pieces
+- color-battle: colour teams race to fill the arena / take over territory (no real flags or brands)
+- marble-race: original coloured marbles race down an obstacle course; elimination rounds
+- plinko: Galton board — hundreds of balls fall through pegs and build a glowing bell curve
+- pendulum-wave: rainbow row of pendulum balls drifting in and out of wave patterns (spectrum look)
+- polyrhythm: concentric arcs/rings where each ball bounces at its own tempo and pitch; they realign at the end
+- converge: chaotic bouncing balls that, by time-reversal, snap into a perfect shape / one point / a picture, then scatter again
+- chaos-divergence: many double pendulums or balls starting 0.001 apart, rainbow-coloured, fanning into chaos
+- orbits: balls orbiting a gravity well, slingshots, collapsing into one core
+- trails: balls leave fading light trails that paint spirals / spectrum art
+- spawner-plays-melody: every bounce plays the next note of an ORIGINAL melody, speeding up as balls multiply
+- newtons-cradle / chain reactions: dominoes of balls, cascades, sand-like ball piles
 ## Posting
 - Metricool brand blogId `8158935`, timezone Asia/Seoul. Publish 08:00 KST.
 - One scheduled post per network so hashtags differ:
