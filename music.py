@@ -143,6 +143,42 @@ def _voice(kind, f, dur):
     raise ValueError(kind)
 
 
+def _sfx(kind, rng):
+    def nz(d): return rng.standard_normal(int(d * SR))
+    def tt(d): return np.arange(int(d * SR)) / SR
+    def hp(x, k=1): 
+        for _ in range(k): x = np.diff(np.concatenate([[0], x]))
+        return x
+    def lp(x, w): return np.convolve(x, np.ones(w) / w, mode="same")
+    if kind == "slice":      # quick airy swish + bright metallic snick
+        t1 = tt(0.16); sw = hp(nz(0.16)) * np.sin(np.pi * np.minimum(1, t1 / 0.16)) ** 2 * 0.6
+        t2 = tt(0.12); f = 3200 + 1800 * np.exp(-t2 * 40)
+        sn = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t2 * 45) * 0.7 + hp(nz(0.12), 2) * np.exp(-t2 * 70) * 0.5
+        out = np.zeros(int(0.22 * SR)); out[:len(sw)] += sw; o = int(0.09 * SR); out[o:o + len(sn)] += sn[:len(out) - o]
+        return out
+    if kind == "pop":        # soft bubble pop
+        t1 = tt(0.12); f = 900 * np.exp(-t1 * 25) + 300
+        return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t1 * 35)
+    if kind == "shatter":    # glassy break: noise burst + inharmonic tinkles
+        t1 = tt(0.6); x = hp(nz(0.6), 2) * np.exp(-t1 * 9) * 0.6
+        for _ in range(7):
+            fr = rng.uniform(2500, 6500); st = rng.uniform(0, 0.25)
+            x += np.sin(2 * np.pi * fr * t1) * np.exp(-np.maximum(t1 - st, 0) * 20) * (t1 > st) * 0.15
+        return x
+    if kind == "whoosh":
+        t1 = tt(0.35); return lp(nz(0.35), 6) * np.sin(np.pi * t1 / 0.35) ** 2 * 0.8
+    if kind == "tick":       # tiny ball-ball contact
+        t1 = tt(0.03); return (np.sin(2 * np.pi * 2400 * t1) * 0.5 + hp(nz(0.03)) * 0.3) * np.exp(-t1 * 160)
+    if kind == "chime":      # escape / goal
+        t1 = tt(1.2); return sum(np.sin(2 * np.pi * f * t1) * np.exp(-t1 * d) for f, d in ((1568, 3), (2349, 4), (3136, 6))) * 0.4
+    if kind == "thump":
+        t1 = tt(0.4); return np.sin(2 * np.pi * np.cumsum(70 * np.exp(-t1 * 12) + 40) / SR) * np.exp(-t1 * 10)
+    if kind == "zap":
+        t1 = tt(0.18); f = 1800 * np.exp(-t1 * 18) + 200
+        return np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * np.exp(-t1 * 22) * 0.3
+    raise ValueError(kind)
+
+
 def _chord_symbol(sym):
     return ROMAN[sym.strip("m").upper()]
 
@@ -169,7 +205,7 @@ class Song:
         self.arp = ARPS[int(self.rng.integers(len(ARPS)))]
         self.motif = list(self.rng.choice([0, 1, 2, 3, 4, 2, 1, 5, -1], size=8))
         self.min_gap = 1.0 / max_rate
-        self.notes, self.accents = [], []
+        self.notes, self.accents, self.sfxs = [], [], []
         self._last_slot, self._step, self._walk = -1, 0, 7
         self._lift_t = None
 
@@ -247,6 +283,11 @@ class Song:
 
     def accent(self, t):
         self.accents.append(t)
+
+    def sfx(self, t, kind, pan=0.0, vel=1.0):
+        """Physical sound effect at the EXACT event time (not quantised): slice, pop, shatter, whoosh,
+        tick, chime, thump, zap. Use for actions; keep musical notes for wall/boundary hits only."""
+        self.sfxs.append((t, kind, float(np.clip(pan, -1, 1)), vel))
 
     def next_bar(self, t):
         """Time of the next bar line at or after t — delay big payoffs (bursts) to land on it."""
@@ -336,6 +377,14 @@ class Song:
             key = (self.lead, mm)
             if key not in cache: cache[key] = _voice(self.lead, midi_hz(mm), 1.6)
             put(cache[key], tq, 0.13 * vel, pan)
+        # sound effects (exact timing, rate-limited per kind so dense moments stay clean)
+        last_k = {}
+        for ts, kind, pan, vel in sorted(self.sfxs):
+            if ts > duration or ts - last_k.get(kind, -1) < 0.035: continue
+            last_k[kind] = ts
+            key = ("sfx", kind, int(ts * 7) % 4)
+            if key not in cache: cache[key] = _sfx(kind, rng)
+            put(cache[key], ts, 0.20 * vel, pan)
         # accents
         for ta in self.accents:
             m = int(2.2 * SR); tt = np.arange(m) / SR
