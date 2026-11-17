@@ -31,3 +31,8 @@ Mechanics worth turning into our own concepts (family in brackets)
 
 Title patterns that work: "[thing] [verb] every bounce…", "Can one ball …?", "until it's completely full",
 "Which colour wins?", "Guess how many …", "Day N of …".
+
+## 2026-11-18 — feedback from the user
+- Rejected 'Shrinking Cage' (shape changed triangle→hexagon and balls appeared on hidden size thresholds): changes without a visible cause feel random. Every change needs a rule the viewer can see.
+- Replaced with 'Merge Ladder' (dropper on the beat + same-size balls merge): both rules are obvious within 2 seconds.
+
