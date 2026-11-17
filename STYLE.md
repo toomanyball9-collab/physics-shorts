@@ -33,6 +33,7 @@ Accounts: TikTok `toomanyball`, Instagram `toomanyball9`, YouTube Shorts channel
   - Never trigger notes from non-bounce events, and never leave a visible action (cut, break, escape) silent.
 - Land the payoff on the beat: when the burst/climax condition is met, trigger it at `song.next_bar(t)` and call `song.accent(...)` there.
 - Quiet and pleasant: render peaks at -6 dBFS (default). Never use existing songs or melodies.
+- Engine choice: the user compared music.py (v2, synthesized voices) with music3.py (sampled GM instruments via fluidsynth) on 2026-11-17 and prefers the v2 synth sound. Keep rendering with music.py; improve quality inside v2 rather than switching to music3.
 - Theme days pick a fitting genre: New Year → kpop_bright/trance_lite; Lunar New Year → gamelan; Valentine's → citypop/lofi; St. Patrick's → celtic; Easter → lullaby; Earth Day → ambient; Chuseok → japanese/ambient; Halloween → desert/cinematic (minor); Thanksgiving → bossa/jazzhop; Christmas → musicbox/waltz.
 ## Concept mix (lean on what works, but stay balanced)
 - Before choosing, check recent performance in Metricool analytics (views, likes, comments, average watch time if available) for the last 7–14 days and record it in concepts.md.
