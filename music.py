@@ -374,6 +374,9 @@ class Song:
         # lead
         for tq, mm, pan, vel in self.notes:
             if tq > duration: continue
+            # notes are chosen before render() knows the lift point, so lift them here too
+            # (otherwise the lead stays in the old key while the chords move up a whole step)
+            mm = mm + self._transpose(tq)
             key = (self.lead, mm)
             if key not in cache: cache[key] = _voice(self.lead, midi_hz(mm), 1.6)
             put(cache[key], tq, 0.13 * vel, pan)

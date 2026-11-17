@@ -23,7 +23,8 @@ SCREEN_SPEED = 540.0
 PAYOFF_TARGET = 61.5
 TAIL = 3.0
 SEED = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].lstrip("-").isdigit() else 9
-SIM_ONLY = "--sim" in sys.argv
+AUDIO_ONLY = "--audio" in sys.argv      # simulate + render audio.wav only (physics is identical)
+SIM_ONLY = "--sim" in sys.argv or AUDIO_ONLY
 OUT = "out_noaudio.mp4"
 PAL = neon.PALETTES["aurora"]
 MUSIC_SEED = 20261135
@@ -430,7 +431,7 @@ print("intervals", [round(b - a, 1) for a, b in zip([0] + brk, brk)])
 print("final_t0", final_t0 and round(final_t0, 1), "burst", burst_t and round(burst_t, 2), "duration", round(t, 2), "balls", len(p))
 print("music", song.recipe_str())
 
-if not SIM_ONLY:
+if not SIM_ONLY or AUDIO_ONLY:
     bk = np.array(build_keys)
     def build(tt):
         return float(np.interp(tt, bk[:, 0], bk[:, 1]))
