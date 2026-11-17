@@ -36,11 +36,12 @@ Accounts: TikTok `toomanyball`, Instagram `toomanyball9`, YouTube Shorts channel
 - Engine choice: the user compared music.py (v2, synthesized voices) with music3.py (sampled GM instruments via fluidsynth) on 2026-11-17 and prefers the v2 synth sound. Keep rendering with music.py; improve quality inside v2 rather than switching to music3.
 - Theme days pick a fitting genre: New Year → kpop_bright/trance_lite; Lunar New Year → gamelan; Valentine's → citypop/lofi; St. Patrick's → celtic; Easter → lullaby; Earth Day → ambient; Chuseok → japanese/ambient; Halloween → desert/cinematic (minor); Thanksgiving → bossa/jazzhop; Christmas → musicbox/waltz.
 ## Concept mix (lean on what works, but stay balanced)
+- Two videos a day: 08:00 KST and 18:00 KST. Every video is a clearly different concept — the two videos of one day are always different families.
 - Before choosing, check recent performance in Metricool analytics (views, likes, comments, average watch time if available) for the last 7–14 days and record it in concepts.md.
-- Over any 7 days: about half the videos may be variations of the best-performing concept families; the other half must be different families (new ideas or rotating older ones).
-- Never the same concept family two days in a row, and at most 3 videos of one family per 7 days.
-- A "variation" must still look clearly new (different arena, palette, twist on the rule).
-
+- Over any 14 videos (7 days): about half may be variations of the best-performing families; the other half must be different families (new ideas or rotating older ones).
+- Never the same family in two consecutive videos, and at most 4 videos of one family in any 14 consecutive videos.
+- A "variation" must still look clearly new (different arena, palette, twist on the rule). Never re-use the exact rule + arena of a past video.
+- Learn every run: research what's new/creative in ball & physics simulation shorts (YouTube Shorts, TikTok) and log 2–5 dated bullets in ideas.md; draw new families and twists from it (inspiration only — never copy a specific video, its names, characters or melodies).
 ## Concept ideas (rotate, never repeat back-to-back; log every one in concepts.md)
 Families (use the family name in concepts.md):
 - wall-split: wall hit doubles / triples / x1.5 the ball (done 2026-11-17)
@@ -79,11 +80,12 @@ Every other day uses the default `orb` skin. Theme days do not count against the
 
 ## Music must be different every time
 - Log `song.recipe_str()` in the Music column of concepts.md.
-- Never reuse a genre that appears in the last 7 videos; never repeat the same genre + key + mode + lead within 30 days (`random_song` enforces both when you pass the recent recipes).
-- Change at least two of bpm / key / mode / lead vs the previous video and keep bpm at least 6 away.
+- Never reuse a genre that appears in the last 7 videos (counting both daily slots); never repeat the same genre + key + mode + lead within 30 days (`random_song` enforces both when you pass the recent recipes).
+- Change at least two of bpm / key / mode / lead vs the previous video (the previous slot) and keep bpm at least 6 away.
 - If a genre clearly performs well, it may come back after 7 days, with a different key, mode and lead.
 ## Posting
-- Metricool brand blogId `8158935`, timezone Asia/Seoul. Publish 08:00 KST.
+- Metricool brand blogId `8158935`, timezone Asia/Seoul. Publish 08:00 KST and 18:00 KST (one video per slot).
+- File names: `videos/<YYYY-MM-DD>_am_<slug>.mp4` (08:00) and `videos/<YYYY-MM-DD>_pm_<slug>.mp4` (18:00); scripts `concepts/<YYYY-MM-DD>_am|pm_<slug>.py`.
 - One scheduled post per network so hashtags differ:
   - YouTube: type `short`, madeForKids false, title ends with `#shorts`; hashtags `#shorts #satisfying #physics #simulation #oddlysatisfying`
   - TikTok: hashtags `#fyp #satisfying #physics #simulation #oddlysatisfying #asmr`
