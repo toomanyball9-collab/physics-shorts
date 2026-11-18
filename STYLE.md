@@ -90,6 +90,6 @@ Every other day uses the default `orb` skin. Theme days do not count against the
 - File names: `videos/<YYYY-MM-DD>_am_<slug>.mp4` (08:00) and `videos/<YYYY-MM-DD>_pm_<slug>.mp4` (18:00); scripts `concepts/<YYYY-MM-DD>_am|pm_<slug>.py`.
 - One scheduled post per network so hashtags differ:
   - YouTube: type `short`, madeForKids false, title ends with `#shorts`; hashtags `#shorts #satisfying #physics #simulation #oddlysatisfying`
-  - TikTok: hashtags `#fyp #satisfying #physics #simulation #oddlysatisfying #asmr`
+  - TikTok: hashtags `#fyp #satisfying #physics #simulation #oddlysatisfying #asmr`; Metricool requires `tiktokData.title` (short English title)
   - Instagram: type `REEL`; hashtags `#reels #satisfying #physics #simulation #oddlysatisfying #asmr`
 - Media URL: `https://raw.githubusercontent.com/toomanyball9-collab/physics-shorts/main/videos/<file>.mp4`
