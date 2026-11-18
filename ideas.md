@@ -50,3 +50,8 @@ kottke.org "Randomly bouncing balls arrange themselves into satisfying patterns"
 - "Drawer"/trail modes (ball path left as light) + "patterns from bouncing" are a separate satisfying genre: the art itself
   is the reward even before the climax → 11-19 pm String Orb (growing ball whose path draws a rosette).
 - Caption hooks that keep showing up: "wait for the last bounce", "will it escape in time?", "which colour wins?", "wait for the overflow".
+
+## 2026-11-18 (evening) — user feedback
+- Said the 2nd video of the day felt lower quality than the 1st; asked for a slicer: a blade moving repeatedly inside the circle, every cut splits a ball into two smaller ones, start BIG.
+- Built 'Blade Cut' (replaces 11-19 pm String Orb). Learned: cut rate is driven by pieces crossing the blade, not blade speed → tune piece speed + blade energy; an energy-based pendulum that eventually loops over the top gives a natural visible escalation.
+
