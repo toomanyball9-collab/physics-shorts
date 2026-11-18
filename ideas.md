@@ -36,3 +36,17 @@ Title patterns that work: "[thing] [verb] every bounce…", "Can one ball …?",
 - Rejected 'Shrinking Cage' (shape changed triangle→hexagon and balls appeared on hidden size thresholds): changes without a visible cause feel random. Every change needs a rule the viewer can see.
 - Replaced with 'Merge Ladder' (dropper on the beat + same-size balls merge): both rules are obvious within 2 seconds.
 
+
+## 2026-11-18 (evening run) — research + numbers
+Sources: ballengine "viral growth blueprint" (funcirclegames.pages.dev/blog/viral-growth-blueprint-tiktok-satisfying-content),
+ballengine Accumulate/spawner mode (funcirclegames.pages.dev/modes/spawner), korpi.ai/best-ai/ball-escape-ring,
+kottke.org "Randomly bouncing balls arrange themselves into satisfying patterns", funcirclegames.pages.dev/help/simulation-modes/drawer-mode.
+- Our first numbers: Ball x2 (11-17) on IG 154 views, avg watch 8.8 s of 65 s → most people leave in the first ~10 s.
+  The first 10 s need a visible event every 1–2 s (first spawn/bounce inside 1 s, early events dense), not just a slow build.
+- Spawner tools list the common "new ball" triggers: wall hit, balls touch, split, steady drop, escape, count to goal, merge numbers.
+  "Balls touch → new ball" is the one we haven't done → 11-19 am Kiss Spawn (with a visible charge ring so growth stays readable).
+- Retention diagnosis rule of thumb: drop in 1st second = hook, mid-video sag = pacing, drop before the end = payoff too late.
+  Keep the payoff ≤ 62 s and make the 20–40 s stretch the busiest-changing part.
+- "Drawer"/trail modes (ball path left as light) + "patterns from bouncing" are a separate satisfying genre: the art itself
+  is the reward even before the climax → 11-19 pm String Orb (growing ball whose path draws a rosette).
+- Caption hooks that keep showing up: "wait for the last bounce", "will it escape in time?", "which colour wins?", "wait for the overflow".
