@@ -47,12 +47,12 @@ Accounts: TikTok `toomanyball`, Instagram `toomanyball9`, YouTube Shorts channel
 ## Concept ideas (rotate, never repeat back-to-back; log every one in concepts.md)
 Families (use the family name in concepts.md):
 - wall-split: wall hit doubles / triples / x1.5 the ball (done 2026-11-17)
-- escape: concentric rotating rings with gaps; each ring breaks with a chord when a ball gets out; escaped balls may spawn 2 more
+- escape: concentric rotating rings with gaps; each ring breaks with a chord when a ball gets out; escaped balls may spawn 2 more — THE USER'S FAVOURITE (Ring Escape 11-18). Use it as the quality benchmark; variations: hexagons (11-19 pm), other shapes, palettes, twists
 - ring-break: ball breaks layer after layer of a regenerating wall ("will it escape?")
 - shrinking-arena: arena shrinks while balls multiply or grow
 - growing-ball: each bounce makes the ball bigger/faster until it fills the arena
 - spinning-shape: balls inside a rotating hexagon / triangle / star / square
-- slicer: a line sweeps or cuts across the circle; every cut doubles the pieces
+- slicer: DROPPED — the user doesn't want cutting/blade concepts (2026-11-18)
 - color-battle: colour teams race to fill the arena / take over territory (no real flags or brands)
 - marble-race: original coloured marbles race down an obstacle course; elimination rounds
 - plinko: Galton board — hundreds of balls fall through pegs and build a glowing bell curve
