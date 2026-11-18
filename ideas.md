@@ -54,4 +54,6 @@ kottke.org "Randomly bouncing balls arrange themselves into satisfying patterns"
 ## 2026-11-18 (evening) — user feedback
 - Said the 2nd video of the day felt lower quality than the 1st; asked for a slicer: a blade moving repeatedly inside the circle, every cut splits a ball into two smaller ones, start BIG.
 - Built 'Blade Cut' (replaces 11-19 pm String Orb). Learned: cut rate is driven by pieces crossing the blade, not blade speed → tune piece speed + blade energy; an energy-based pendulum that eventually loops over the top gives a natural visible escalation.
+- User on Blade Cut v1: 'too out of place, badly made'. What was wrong: grey stick blade that didn't match the neon look, rainbow generation colours (noise), 470 crumbs, pieces piling up along the blade. v3 fixes: neon laser blade in the same glow language as the ring, one colour family (blue→mint), ONE big hero ball at the start (like Ring Escape's single ball), visible half-disc split animation, no pile-ups. Benchmark the user likes: Ring Escape — clean structure, one clear rule, few elements, steady escalation.
+- Research: viral 'A spinning paddle doubles every ball it touches' short (youtube.com/shorts/pY7NhfIRwP0); ViralBalls' 10 modes (classic rings, accumulation/freeze, multiply, lines, paint %, target order, grow, shatter HP walls, colour match, portals) — viralballs.com/en.
 
