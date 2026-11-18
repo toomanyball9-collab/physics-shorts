@@ -82,28 +82,38 @@ def remove(idx):
     keep = np.ones(len(p), bool); keep[list(idx)] = False
     p, v, tier, born = p[keep], v[keep], tier[keep], born[keep]
 
+CRACKS = [(0.5 * math.pi + o, L) for o, L in
+          [(0.0, 1.0), (0.22, 0.8), (-0.25, 0.85), (0.45, 0.6), (-0.5, 0.65), (0.1, 0.7), (-0.12, 0.75),
+           (0.7, 0.5), (-0.75, 0.5), (0.33, 0.55), (-0.38, 0.6), (0.9, 0.4), (-0.95, 0.4), (0.58, 0.45)]]
+
 def do_burst():
+    """The bowl gives way under the weight: the bottom breaks first and everything falls down."""
     global burst_t, v
     burst_t = t
-    d = p - (CX, CY)
-    dist = np.hypot(d[:, 0], d[:, 1]) + 1e-6
-    v = d / dist[:, None] * rng.uniform(350, 900, len(p))[:, None]
+    lat = (p[:, 0] - CX) / R
+    depth = np.clip((p[:, 1] - (CY - R)) / (2 * R), 0, 1)            # lower balls drop first / faster
+    v = np.stack([lat * rng.uniform(60, 240, len(p)), 120 + 420 * depth + rng.uniform(0, 80, len(p))], 1)
     N = 26
     for m in range(N):
         ac = 2 * math.pi * (m + 0.5) / N
-        sp = rng.uniform(600, 1200)
-        frags.append([CX + R * math.cos(ac), CY + R * math.sin(ac), math.cos(ac) * sp, math.sin(ac) * sp,
-                      ac, 2 * math.pi / N * 0.85, 0.0, rng.uniform(-5, 5), t])
+        ox, oy = math.cos(ac), math.sin(ac)
+        if oy > 0.25:      # bottom of the bowl: blown down and out
+            vx, vy = ox * rng.uniform(140, 320), oy * rng.uniform(250, 520) + 150
+        else:              # sides / top: they lose support and fall
+            vx, vy = ox * rng.uniform(40, 140), rng.uniform(-60, 40)
+        frags.append([CX + R * ox, CY + R * oy, vx, vy, ac, 2 * math.pi / N * 0.85, 0.0, rng.uniform(-4, 4), t])
     for _ in range(60):
-        a = rng.uniform(0, 2 * math.pi)
+        a = rng.uniform(0.15 * math.pi, 0.85 * math.pi)
         sparks.append([CX + R * math.cos(a), CY + R * math.sin(a), rng.uniform(10, 26), t, (1, 1, 1)])
     song.accent(t)
     song.sfx(t, "shatter", 0.0, 1.0)
+    song.sfx(t + 0.02, "thump", 0.0, 1.0)
     events.append((t, "burst", 0))
 
 def physics_step(dt):
     global p, v, merges, top_tier, fill, heat, burst_pending
     if burst_t is not None:
+        v[:, 1] += G * dt          # everything keeps falling
         p += v * dt
         return
     n = len(p)
@@ -217,6 +227,23 @@ def draw(counter=True):
     ring_col = neon.mix((0.75, 0.70, 1.0), TIER_COLS[max(top_tier, 0)], 0.5)
     if burst_t is None:
         neon.ring(ctx, CX, CY, R + 3, ring_col, t, heat=heat)
+        if heat > 0:
+            ctx.save(); ctx.set_operator(cairo.OPERATOR_ADD); ctx.set_line_cap(cairo.LINE_CAP_ROUND); ctx.set_line_join(cairo.LINE_JOIN_ROUND)
+            ncr = int(math.ceil(heat * len(CRACKS)))
+            for j, (ang, L) in enumerate(CRACKS[:ncr]):
+                grow = min(1.0, heat * len(CRACKS) - j)
+                ln = 70 * L * grow * (0.6 + 0.4 * heat)
+                ux, uy = math.cos(ang), math.sin(ang); px_, py_ = -uy, ux
+                pts = [(R + 3, 0), (R + 3 + ln * 0.35, 7), (R + 3 + ln * 0.7, -6), (R + 3 + ln, 3)]
+                ins = [(R + 3, 0), (R + 3 - ln * 0.3, -6), (R + 3 - ln * 0.55, 5)]
+                for w_, a_ in ((7, 0.18), (2.2, 0.85)):
+                    ctx.set_source_rgba(1.0, 0.55 + 0.3 * (1 - heat), 0.45, a_ * grow); ctx.set_line_width(w_)
+                    for path in (pts, ins):
+                        ctx.move_to(CX + ux * path[0][0] + px_ * path[0][1], CY + uy * path[0][0] + py_ * path[0][1])
+                        for r_, o_ in path[1:]:
+                            ctx.line_to(CX + ux * r_ + px_ * o_, CY + uy * r_ + py_ * o_)
+                        ctx.stroke()
+            ctx.restore()
         # dropper
         ex, ey = emitter_x, emitter_y()
         pulse = max(0.0, 1 - (t - (next_drop - beat_gap())) / 0.25) if drops else 0.0
@@ -237,7 +264,7 @@ def draw(counter=True):
         if sa > 0:
             ctx.save(); ctx.set_operator(cairo.OPERATOR_ADD)
             ctx.set_source_rgba(1, 1, 1, sa); ctx.set_line_width(22 * sa + 2)
-            ctx.arc(CX, CY, R + 2200 * dt_b, 0, 2 * math.pi); ctx.stroke(); ctx.restore()
+            ctx.arc(CX, CY + R, 60 + 1800 * dt_b, 0, 2 * math.pi); ctx.stroke(); ctx.restore()
         ctx.save(); ctx.set_operator(cairo.OPERATOR_ADD); ctx.set_line_cap(cairo.LINE_CAP_ROUND)
         for fx, fy, _vx, _vy, ac, span, frot, _vr, ft0 in frags:
             fa = max(0.0, 1 - (t - ft0) / 2.2)
@@ -332,7 +359,7 @@ while True:
         if burst_pending is not None and burst_t is None and t >= burst_pending:
             do_burst()
         for f in frags:
-            f[0] += f[2] * dt; f[1] += f[3] * dt; f[6] += f[7] * dt
+            f[3] += G * dt; f[0] += f[2] * dt; f[1] += f[3] * dt; f[6] += f[7] * dt
         t += dt
     if frame % 15 == 0:
         build_keys.append((t, progress()))
