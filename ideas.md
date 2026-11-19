@@ -58,3 +58,17 @@ kottke.org "Randomly bouncing balls arrange themselves into satisfying patterns"
 - Research: viral 'A spinning paddle doubles every ball it touches' short (youtube.com/shorts/pY7NhfIRwP0); ViralBalls' 10 modes (classic rings, accumulation/freeze, multiply, lines, paint %, target order, grow, shatter HP walls, colour match, portals) — viralballs.com/en.
 - User: drop the slicer entirely ('too awkward'); make videos with the feel of Ring Escape (13 neon rings). Their favourite so far = Ring Escape. Lean on its structure (one ball, nested neon layers, escape → break → +2 balls, zoom out, sealed final layer bursts) and vary arena shape / palette / music / twist. Made Hex Escape for 11-19 18:00.
 
+## 2026-11-19 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); YouTube Shorts "What happened in the end? 😳" (youtube.com/shorts/P0H8Pv7aAFw),
+"sounds familiar 🤔" (youtube.com/shorts/e6ZImW6HeWc), "What sound are balls making?" (youtube.com/shorts/lDoadSgwjlk),
+"Can the Ball Beat the Shrinking Circle?" (youtube.com/shorts/CPw2d5chCtg); ballengine trail mode (main-copy.funcirclegames.pages.dev/modes/trail).
+- IG numbers (~36–46 h): Ring Escape 2,218 views / 36 likes / avg watch 20.2 s / skip 29.7%; Merge Ladder 2,358 views / 8 likes / 14.6 s / skip 37.2%;
+  Ball x2 158 views / 8.9 s / skip 40.6%. Escape = ~4.5x the likes per view and +40% watch time; merge reaches as many people.
+  → keep escape as the quality benchmark, but merge-ladder earns a variation too. TikTok still reports 0 views for all posts (check the account).
+- Lowest skip rate = structure visible in frame 1 (13 rings) + motion in the first second. Every opener should show the whole "machine" at once
+  and have a first event (swallow / merge / escape) inside ~1 s.
+- Title trend on ball sims: mystery questions that invite comments ("What happened in the end? 😳", "Sounds familiar 🤔", "Do you know this one?")
+  and versus framing ("Can the ball beat …?"). Use "vs" + a question; ask viewers to pick a side in the first comment.
+- Trail modes: short coloured trails make curved paths (gravity) readable; long rainbow trails on many balls wash out to grey → keep trails short, per-ball colour.
+- New this run: [orbits] Black Hole (horizon grows with every swallowed ball, r ∝ M; tide tears the ring) and a merge-ladder variation
+  with two teams that can't merge with each other (Merge Duel, "teal or amber?").
