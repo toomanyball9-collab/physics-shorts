@@ -125,6 +125,7 @@ def outline(n=240):
     return pts
 OUTLINE = outline()
 
+DRAW_CRACKS = False   # user (11-19): zigzag crack lines look cheap and out of place — never draw them
 CRACKS = [(0.5 * math.pi + o, L) for o, L in
           [(0.0, 1.0), (0.22, 0.8), (-0.25, 0.85), (0.45, 0.6), (-0.5, 0.65), (0.1, 0.7), (-0.12, 0.75),
            (0.7, 0.5), (-0.75, 0.5), (0.33, 0.55), (-0.38, 0.6), (0.9, 0.4), (-0.95, 0.4), (0.58, 0.45)]]
@@ -274,7 +275,7 @@ def draw(counter=True):
         ctx.translate(fx_rng.uniform(-shake, shake), fx_rng.uniform(-shake, shake))
     if burst_t is None:
         neon.polygon_ring(ctx, [(x, y) for x, y in OUTLINE], WALL_COL, heat=heat, t=t)
-        if heat > 0:
+        if DRAW_CRACKS and heat > 0:
             ctx.save(); ctx.set_operator(cairo.OPERATOR_ADD); ctx.set_line_cap(cairo.LINE_CAP_ROUND); ctx.set_line_join(cairo.LINE_JOIN_ROUND)
             ncr = int(math.ceil(heat * len(CRACKS)))
             for j, (ang, L) in enumerate(CRACKS[:ncr]):

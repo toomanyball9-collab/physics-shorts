@@ -237,6 +237,7 @@ def draw_hole(ctx, r_h, dc, swirl):
         ctx.new_path(); ctx.arc(CX, CY, r_h + 1.5, 0, 2 * math.pi); ctx.stroke()
     ctx.restore()
 
+DRAW_CRACKS = False   # user (11-19): zigzag crack lines look cheap and out of place — never draw them
 CRACKS = [(a, L) for a, L in zip(np.linspace(0, 2 * math.pi, 17)[:-1] + 0.21, [1, .7, .85, .6, .9, .65, .8, .55, 1, .75, .6, .9, .7, .8, .6, .85])]
 
 def draw(counter=True):
@@ -261,7 +262,7 @@ def draw(counter=True):
     if tear_t is None:
         squeeze = 10 * heat ** 2
         neon.ring(ctx, CX, CY, R + 3 - squeeze, RING_COL, t, heat=heat)
-        if heat > 0.15:
+        if DRAW_CRACKS and heat > 0.15:
             hh = (heat - 0.15) / 0.85
             ctx.save(); ctx.set_operator(cairo.OPERATOR_ADD); ctx.set_line_cap(cairo.LINE_CAP_ROUND); ctx.set_line_join(cairo.LINE_JOIN_ROUND)
             ncr = int(math.ceil(hh * len(CRACKS)))

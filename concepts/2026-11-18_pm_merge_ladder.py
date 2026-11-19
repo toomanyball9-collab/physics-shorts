@@ -82,6 +82,7 @@ def remove(idx):
     keep = np.ones(len(p), bool); keep[list(idx)] = False
     p, v, tier, born = p[keep], v[keep], tier[keep], born[keep]
 
+# DO NOT reuse the crack drawing: user banned crack lines 2026-11-19 (see STYLE.md)
 CRACKS = [(0.5 * math.pi + o, L) for o, L in
           [(0.0, 1.0), (0.22, 0.8), (-0.25, 0.85), (0.45, 0.6), (-0.5, 0.65), (0.1, 0.7), (-0.12, 0.75),
            (0.7, 0.5), (-0.75, 0.5), (0.33, 0.55), (-0.38, 0.6), (0.9, 0.4), (-0.95, 0.4), (0.58, 0.45)]]

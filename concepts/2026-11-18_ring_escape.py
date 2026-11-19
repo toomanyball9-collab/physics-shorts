@@ -289,7 +289,7 @@ def draw(counter=True):
         glow = 1.0 + (0.6 * hit_flash if is_cur else 0.0)
         if k == N_GAP:
             arc_ring(CX, CY, R, 0, 2 * math.pi, PAL["ring"], alpha, heat if is_cur else 0.0, 6.0, glow)
-            # cracks
+            # cracks (DO NOT reuse: user banned crack lines 2026-11-19, see STYLE.md)
             if cracks:
                 ctx.save(); ctx.set_operator(cairo.OPERATOR_ADD); ctx.set_line_width(2.2)
                 cc = neon.mix((1, 1, 1), (1, .35, .3), heat)

@@ -72,3 +72,6 @@ Sources: Metricool analytics (brand 8158935); YouTube Shorts "What happened in t
 - Trail modes: short coloured trails make curved paths (gravity) readable; long rainbow trails on many balls wash out to grey → keep trails short, per-ball colour.
 - New this run: [orbits] Black Hole (horizon grows with every swallowed ball, r ∝ M; tide tears the ring) and a merge-ladder variation
   with two teams that can't merge with each other (Merge Duel, "teal or amber?").
+
+## 2026-11-19 (late) — user feedback
+- The zigzag crack strokes on the heated wall (Merge Duel capsule bottom, Black Hole ring, also used in Merge Ladder / Break Through) look cheap and alien to the neon look — never show them again. Tension = red heat + glow pulse + shake only. Re-rendered both 11-20 videos without them (DRAW_CRACKS = False).
