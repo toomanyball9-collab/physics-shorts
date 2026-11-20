@@ -75,3 +75,20 @@ Sources: Metricool analytics (brand 8158935); YouTube Shorts "What happened in t
 
 ## 2026-11-19 (late) — user feedback
 - The zigzag crack strokes on the heated wall (Merge Duel capsule bottom, Black Hole ring, also used in Merge Ladder / Break Through) look cheap and alien to the neon look — never show them again. Tension = red heat + glow pulse + shake only. Re-rendered both 11-20 videos without them (DRAW_CRACKS = False).
+
+## 2026-11-20 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); BallEngine escape-mode help (funcirclegames.pages.dev/help/simulation-modes/escape-mode);
+UMD LecDem "Animation highlight: pendulum waves" (lecdem.physics.umd.edu/tools-and-resources/lecdem-blog/460-animation-highlight-pendulum-waves-blog.html);
+Wolfram "Pendulum Waves" (demonstrations.wolfram.com/PendulumWaves/).
+- Numbers (IG, 1–3 days): Ring Escape 2,233 views / 37 likes / 20.2 s avg / skip 29.7%; Hex Escape 2,207 / 10 / 17.6 s / 31.1%;
+  Merge Ladder 2,386 / 9 / 14.5 s / 37.4%; Break Through 226 / 2 / 11.4 s / 42.9% (flop). YouTube finally reports: Ball x2 1,074 views
+  (8 s avg), Ring Escape 813 views (16 s avg). Escape is consistently the best for watch time; ring-break (bricks) didn't land — rest it.
+  TikTok still reports 0 views on every post → the account/connection needs checking.
+- Escape tools now ship gap patterns (spiral, staggered, opposite), alternating rotation, shrink mode and time-trial clocks. Our own new
+  twist instead: COLOUR GATES — the ball changes colour on every bounce and can only pass the gate of its own colour (near misses on the
+  wrong colour are the tension). → 11-21 am Colour Gate.
+- Pendulum waves: periods chosen so ball n makes exactly (K+n) swings in one cycle → patterns (wave, snakes, 2/3/4 interleaved groups,
+  chaos) and a guaranteed full realignment at the cycle time. Perfect for our rules: every change has a visible cause, the payoff is pure
+  physics and can be placed exactly on a bar, and the video loops by itself. → 11-21 pm Pendulum Wave (top ball's period = 1 bar).
+- Escape-mode presets suggest 10–15 rings with large gaps for "quick breakout", 30–50 rings with small gaps for long tense runs — our
+  12 rings + slow-opening gaps sit in the quick-breakout zone, which matches the 55–65 s payoff.
