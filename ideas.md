@@ -92,3 +92,20 @@ Wolfram "Pendulum Waves" (demonstrations.wolfram.com/PendulumWaves/).
   physics and can be placed exactly on a bar, and the video loops by itself. → 11-21 pm Pendulum Wave (top ball's period = 1 bar).
 - Escape-mode presets suggest 10–15 rings with large gaps for "quick breakout", 30–50 rings with small gaps for long tense runs — our
   12 rings + slow-opening gaps sit in the quick-breakout zone, which matches the 55–65 s payoff.
+
+## 2026-11-21 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); Know Your Meme "Weapon Ball Battles" (knowyourmeme.com/memes/weapon-ball-battles-earclacks);
+BallEngine Shorts generator page (funcirclegames.pages.dev/youtube-shorts-generator); jimmylol "The bouncing ball project" devlog
+(jimmylol.itch.io/the-bouncing-ball-project/devlog/853575/new-mode); integral-pixels "Ultimate Galton Board" (integral-pixels.itch.io/ultimate-galton-board).
+- Numbers (IG): Merge Duel 2,271 views / 11 likes / 16.8 s avg / skip 31.0% → merge-ladder keeps the highest reach and now good watch time too.
+  Black Hole 1,458 / 23 likes (best like-rate after Ring Escape) but 10.9 s avg and 42% skip → the rule is loved, the opener was too slow/empty.
+  YouTube: Ring Escape 1,277, Ball x2 1,120, Merge Ladder 1,069, Hex Escape 1,033, Break Through 1,017, Black Hole 105 (new). TikTok: still 0 views on every post.
+- Versus + escalation series are the big growth engine in ball battles: two circles, each hit upgrades the attacker (more damage / more spin), titles
+  "A 🗡 VS 🛡 B" with emojis between the names, and tournament / "training arc" episodes that give a reason to follow. → use "X vs Y" titles and
+  pick-a-side first comments; consider a recurring league format later (original names only).
+- Vendor guidance from ball-sim generators: escalate (speed / size / count) so viewers don't drop mid-video; silent clips underperform; "rhythmic"
+  modes play the next note of a melody on every collision; mode hooks are one-liners ("One ball becomes hundreds", "Break out through the rings").
+- "Tiny difference → chaos" (many copies started 0.000001 apart) is its own satisfying genre with built-in comment bait ("which colour survives?").
+  Learned while building One Survives: a ball in a round ring (even with gravity) is almost regular — the copies stay glued together for 30+ s and then
+  leave all at once. Convex pegs inside the ring (Sinai-billiard style) make the split start within ~2 s and give a smooth spread of exits.
+- Grow-on-every-wall-hit and Galton boards keep appearing as evergreen modes; Galton is "relaxing" rather than tense — would need a twist + payoff.
