@@ -127,3 +127,9 @@ viral sharing tips (funcirclegames.pages.dev/help/social-and-sharing/viral-shari
 - Generators ship "ring escape", "split on every bounce" and "piano bounce" as their core scenes (notes on every bounce,
   seed-picking for a good run); the idle game "Idle Ball Escape" combines escape rings with GRAVITY → future escape variation:
   gravity + rotating rings, the ball has to bounce its way up and out.
+
+## 2026-11-23 (early) — user feedback
+- Grow Escape (escape variation: balls grow on every wall hit) was rejected before posting: "it's the same video with only the song changed".
+  A rule tweak inside the same 12-ring look does NOT count as a new video for the user — escape variations need a clearly different
+  arena/structure, or rest the family for a while. Replaced 18:00 with Gate Race (new marble-race family, scrolling course, elimination gates).
+- The user liked Bell Curve (plinko): dense gravity piles, colour strata, a target to fill and a weight-driven payoff.
