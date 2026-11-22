@@ -109,3 +109,21 @@ BallEngine Shorts generator page (funcirclegames.pages.dev/youtube-shorts-genera
   Learned while building One Survives: a ball in a round ring (even with gravity) is almost regular — the copies stay glued together for 30+ s and then
   leave all at once. Convex pegs inside the ring (Sinai-billiard style) make the split start within ~2 s and give a smooth spread of exits.
 - Grow-on-every-wall-hit and Galton boards keep appearing as evergreen modes; Galton is "relaxing" rather than tense — would need a twist + payoff.
+
+## 2026-11-22 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); BallEngine Escape Mode help (funcirclegames.pages.dev/help/simulation-modes/escape-mode) and
+viral sharing tips (funcirclegames.pages.dev/help/social-and-sharing/viral-sharing-tips); WaveSpeed bouncing-ball video maker
+(wavespeed.ai/free-tools/bouncing-ball-video-maker); App Store "Idle Ball Escape: Smash Rings" (apps.apple.com/us/app/idle-ball-escape-smash-rings/id6759967969).
+- Numbers (IG): Colour Gate flopped (250 views, 11.7 s avg, 42.7% skip) while Ring/Hex Escape hold ~2.2k and 17–20 s → the escape
+  structure works, but the twist must be readable in the first second without explanation (colour cycling + matching gates wasn't).
+  Pendulum Wave got reach (2,393) but the weakest watch time (9.9 s, 41.6% skip) → calm, non-escalating concepts lose viewers early.
+  YouTube: Merge Duel 1,129, Colour Gate 493 (15 s avg). TikTok: still 0 views on every post.
+- Escape tools keep adding variants: shrink mode (rings close in until they break), time trial (+5 s per ring), gap patterns
+  (spiral / staggered / opposite), and "progressive break stages" — the break SOUND changes as more rings are gone. Our own twist
+  today: every wall hit makes a ball bigger and it must still FIT the gap (too-big balls bounce off the gap edges) → 11-23 pm Grow Escape.
+- Vendor viral tips map modes to goals: suspense = escape, visible progress = counters, build-up = spawner, payoff = breaker,
+  calm = drawer/wave. Calm mechanics need a progress goal + payoff on top → 11-23 am Bell Curve: a Galton board (calm) with a
+  dashed target curve to fill, a live counter, rising drop rate and a floor that gives way under the weight.
+- Generators ship "ring escape", "split on every bounce" and "piano bounce" as their core scenes (notes on every bounce,
+  seed-picking for a good run); the idle game "Idle Ball Escape" combines escape rings with GRAVITY → future escape variation:
+  gravity + rotating rings, the ball has to bounce its way up and out.
