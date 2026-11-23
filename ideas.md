@@ -133,3 +133,23 @@ viral sharing tips (funcirclegames.pages.dev/help/social-and-sharing/viral-shari
   A rule tweak inside the same 12-ring look does NOT count as a new video for the user — escape variations need a clearly different
   arena/structure, or rest the family for a while. Replaced 18:00 with Gate Race (new marble-race family, scrolling course, elimination gates).
 - The user liked Bell Curve (plinko): dense gravity piles, colour strata, a target to fill and a weight-driven payoff.
+
+## 2026-11-23 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); Ball Chaos – Visual Playground (apps.apple.com/us/app/ball-chaos-visual-playground/id6479562631);
+ballsimulator.com "How to create viral bouncing ball videos" (ballsimulator.com/en/blog/how-to-create-viral-bouncing-ball-videos/);
+kottke.org "The ball is its own video" (kottke.org/24/11/0045638-ive-seen-a-lot-of); jimmylol devlog (jimmylol.itch.io/the-bouncing-ball-project/devlog).
+- Numbers (IG): Merge Spin 2,487 views / 18 likes / 19.3 s avg (2nd-best watch time after Ring Escape) and One Survives 2,642 views (best reach,
+  13.6 s avg, 33% skip). Merge-ladder is now the most reliable family (4 posts, all 2.3–2.5k, 14.5–19.3 s). Pendulum Wave keeps the weakest
+  watch time (9.9 s). YouTube still only reports up to 11-21 (Colour Gate 493). TikTok: 0 views on every post — the connection/account needs a look.
+- Generator vendors now ship "Accumulation" (balls freeze in place and become part of the arena) and "Infinite Loop" (perfect loop = retention)
+  as headline modes; apps add "Square Race" obstacle courses and "Music Square" (rhythm-synced motion). → our own take on accumulation:
+  freezing balls grow a 6-fold mirrored SNOWFLAKE (diffusion-limited growth: drifting balls stick on touch, the crystal copies each one six ways);
+  the arms naturally grow toward where the balls come from, so the vents decide the shape. Payoff = frost wedging: an arm touches the ring → ring splits.
+- Learned while tuning Snowflake: with 12-fold copies, ~90 real freezes are enough to reach the ring — the launch rate must start very low
+  (every other beat) or it's over in 30 s. A frozen copy that lands past the ring must be clamped onto the ring (not skipped), otherwise the
+  crystal stalls just short of the wall and the payoff never comes.
+- Merge variation that looks new: a TILTED sieve splitting the capsule (pegs with gaps): small balls rain through, big ones roll to the low end
+  and pile up; a flat sieve clogged in ~20 s and stopped the sorting — tilt keeps the upper part open so the sorting stays visible to ~45 s.
+  Two-stage payoff with a visible cause each: the sieve snaps under the packed top pile, the avalanche's impact breaks the floor on the next bar.
+- Engagement idea from reviews of ball apps: viewers ask for "balls that split after escaping" and "a sound on every escape" → sound design per
+  event (tick on freeze, chime every few) keeps dense moments readable.
