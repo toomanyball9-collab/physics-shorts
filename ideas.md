@@ -153,3 +153,23 @@ kottke.org "The ball is its own video" (kottke.org/24/11/0045638-ive-seen-a-lot-
   Two-stage payoff with a visible cause each: the sieve snaps under the packed top pile, the avalanche's impact breaks the floor on the next bar.
 - Engagement idea from reviews of ball apps: viewers ask for "balls that split after escaping" and "a sound on every escape" → sound design per
   event (tick on freeze, chime every few) keeps dense moments readable.
+
+## 2026-11-24 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); Jelle's Marble Runs wiki "Marble Survival 100" (jellesmarbleruns.fandom.com/wiki/Marble_Survival_100);
+Know Your Meme "Treadmill Racing" (knowyourmeme.com/memes/subcultures/treadmill-racing); "Dot Battle – a Javascript physics toy"
+(sheep.horse/2025/10/dot_battle_-_a_javascript_physics_toy.html).
+- Numbers (IG): Gate Race (marble-race, 11-23 pm) = BEST average watch time so far (20.6 s, skip 30.9%, 2,480 views, 21 likes), ahead of
+  Ring Escape (20.1 s). Bell Curve 2,364 views / 15.0 s / 39% skip (ok reach, average watch). One Survives keeps the best reach (2,774).
+  → marble-race earns a variation; a clear "who's out next" elimination structure holds people. YouTube still only reports up to 11-21; TikTok 0 views.
+- Elimination ladders keep audiences for months: Marble Survival 100 = one race a day, bottom two cut after each event, single elimination at the
+  end, numbered "Race N" chapters. Treadmill racing titles state the stakes up front ("FIRST TO FALL OFF LOSES!", "Guess who wins").
+  → 11-25 pm Lift Laps: a looping one-screen course, the last marble to finish each lap drops through a trapdoor; stakes readable at a glance.
+- Physics battles with no narration ("Who will win?") let viewers work out the rules by watching, like a sports announcer (Dot Battle: colour
+  armies, x2/+4 chutes, damage on contact). → 11-25 am Colour Cycle: three colours in a cycle (pink>gold>cyan>pink), explained only by a
+  3-dot legend with arrows; contact converts.
+- Learned while building: pong-wars-style territory painting is self-balancing (a small territory has more frontier per ball, so it paints and
+  splits faster) — 4 teams never finished in 80 s, even with split-on-paint, pop-on-painted-tile and annihilation rules. Cyclic dominance on contact
+  gives big swings (a colour can drop to 3 balls and come back) and a built-in plot twist: when one colour dies, the colour that beats the
+  current LEADER takes everything (11-25 am seed: pink led 104-16 and still lost to cyan).
+- Looping courses: a lift that only pushes marbles up must not overlap the "not yet in the lift" wall clamp, or marbles pile up at the entrance;
+  open the trapdoor only once the last marble reaches the final ramp, otherwise faster marbles on the next lap fall through it.
