@@ -173,3 +173,23 @@ Know Your Meme "Treadmill Racing" (knowyourmeme.com/memes/subcultures/treadmill-
   current LEADER takes everything (11-25 am seed: pink led 104-16 and still lost to cyan).
 - Looping courses: a lift that only pushes marbles up must not overlap the "not yet in the lift" wall clamp, or marbles pile up at the entrance;
   open the trapdoor only once the last marble reaches the final ramp, otherwise faster marbles on the next lap fall through it.
+
+## 2026-11-25 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); ballsimulator.com "10 pro tips to make your bouncing ball videos go viral"
+(ballsimulator.com/en/blog/10-pro-tips-to-make-your-bouncing-ball-videos-go-viral/) and "How to create viral bouncing ball videos"
+(ballsimulator.com/en/blog/how-to-create-viral-bouncing-ball-videos/); Tellter BallTok (tellter.com/projects/balltok);
+Bustle on bottle-rolling ASMR psychology (bustle.com/life/bottle-rolling-videos-tiktok-psychology-asmr); almanac.com/calendar/date/2026-11-26 (Thanksgiving).
+- Numbers (IG): Merge Sieve 2,359 views / 17.8 s / 33% skip (merge-ladder stays the most reliable family); Snowflake 2,275 views / 20 likes but only
+  11.7 s and 39% skip — like Pendulum Wave, a calm "growing art" build gets likes but loses viewers early. Gate Race keeps the best watch time (20.7 s).
+  YouTube now reports up to 11-22 and ranks differently from IG: Merge Duel 1,395, Break Through 1,355 (an IG flop!), Pendulum 1,349. TikTok: still 0 views on every post.
+- Three hooks named in the Bustle piece: non-human motion, uncertainty over whether the object BREAKS, and a promise of transformation.
+  → 11-26 am Glass Floors puts a "will this one hold?" question on every floor (visible strength = glass thickness, heat/sag as the pile grows);
+  11-26 pm Feast is pure transformation (four tiny orbs → one orb that fills the ring).
+- Vendor tips: start with the ball already moving toward the first obstacle (no slow intro), calibrate the climax so the peak lands inside the clip,
+  rotate modes by weekday. "Expansion" (grow until it fills the frame) and "Accumulation" are standard modes — our twist on expansion is competitive:
+  orbs eat leaves blown in on the beat and the clearly bigger orb swallows the smaller (agar-style), so viewers can pick a colour.
+- Learned while building: with AREA-based growth the rivals' size ratio drifts back toward 1 (stalemates, nobody can swallow anyone); adding a fixed
+  RADIUS per leaf + "bigger sweeps more" makes the leader pull away, so eliminations happen — and the early leader can still lose (11-26 pm seed:
+  plum ate two rivals at 17 s, then got swallowed by cranberry at 43 s).
+- Deep gravity piles (400 balls) need a position-based solver (8 projection passes + a little damping on resting contacts), otherwise the pile
+  compresses and "boils"; a tiny random offset at the side walls stops impossible vertical columns of balls standing against a smooth wall.
