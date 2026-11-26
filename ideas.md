@@ -193,3 +193,22 @@ Bustle on bottle-rolling ASMR psychology (bustle.com/life/bottle-rolling-videos-
   plum ate two rivals at 17 s, then got swallowed by cranberry at 43 s).
 - Deep gravity piles (400 balls) need a position-based solver (8 projection passes + a little damping on resting contacts), otherwise the pile
   compresses and "boils"; a tiny random offset at the side walls stops impossible vertical columns of balls standing against a smooth wall.
+
+## 2026-11-26 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); "Majority Rules" marble race (cyanbeast01.itch.io/majority-rules); "Last Marble Wins"
+(app.cinevva.com/arcade/last-marble-wins); Spin Striker app (apps.apple.com/us/app/-/id6749786592); "Viral YouTube Video Trends, November 2026"
+(blog.mean.ceo/viral-youtube-video-trends-november-2026/).
+- Numbers (IG): Lift Laps (marble-race) = BEST reach so far (3,306 views) and the LOWEST skip rate (28.4%), 18.0 s avg; Gate Race keeps the best
+  watch time (20.7 s). Marble-race is now the strongest family on IG for both reach and holding people. Colour Cycle got the MOST likes ever (39,
+  2,292 views) but only 12.7 s / 42.9% skip → "pick a side / who wins?" earns likes, the opener needs a faster first event.
+  YouTube ranks calm loops differently: Snowflake 871 views, 13 likes, 3 comments and an average view of 85 s (people loop it). TikTok: still 0 views.
+- Staged knockouts keep a field narrowing in visible steps (Majority Rules: 27 marbles, 6 legs with 2–3 qualifying slots each); "Last Marble Wins"
+  inverts the race rule (the LAST to cross wins); Spin Striker's race mode = race to the bottom by breaking barriers, with a clean "simple view" for
+  screen recording. → 11-27 am Knockout Duels: a physical 8-marble BRACKET, raced as 1-v-1 duels; a flip gate at the finish (the first marble falls
+  through and knocks the flap shut, the second rolls over it into the pit), the winner rides a glass tube up into its next bracket slot.
+- Hook rule of thumb for Shorts: one outcome, one tension point, one curiosity gap, and a payoff the visuals promise. → 11-27 pm Hot Potato (new
+  family): one bomb, a visible fuse arc that always runs out on the beat (tension point), "who is holding it at zero?" (curiosity gap); touching
+  passes it, the holder pops, survivors grow, 10 → 1.
+- Learned while building: in a bracket every duel must start the moment the previous one is decided (not when its loser is gone), and the finish
+  gate must stay shut until that loser has passed — otherwise either 4 s of dead time per duel or both racers of the next duel drop into the pit.
+  Pegs closer than one marble-width to a wall trap marbles forever (keep wall gaps > 2·r + peg r).
