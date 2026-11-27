@@ -212,3 +212,25 @@ Sources: Metricool analytics (brand 8158935); "Majority Rules" marble race (cyan
 - Learned while building: in a bracket every duel must start the moment the previous one is decided (not when its loser is gone), and the finish
   gate must stay shut until that loser has passed — otherwise either 4 s of dead time per duel or both racers of the next duel drop into the pit.
   Pegs closer than one marble-width to a wall trap marbles forever (keep wall gaps > 2·r + peg r).
+
+## 2026-11-27 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); BallEngine mode catalogue (ballengine.app/ball-simulator); ViralBalls "Ball Bouncing Simulator"
+blog, 2026-03-10 (viralballs.com/en/blog/ball-bouncing-simulator-free-online-physics-sandbox); Loop Physics release "One ball becomes chaos"
+(github.com/hthkrksy54-dotcom/Yt/releases/tag/sims-20261016-multiply-3).
+- Numbers (IG): Lift Laps (marble-race) jumped to 5,061 views — twice any other post — with the lowest skip (27.2%) and 5 saves; Glass Floors
+  (chain-reaction) got the MOST likes ever (47) with 18.6 s avg and 30.6% skip. The two best families right now: marble-race for reach,
+  "will the glass hold?" for likes. YouTube still only reports up to 11-25 am; TikTok still reports 0 views on every post.
+  → 11-28 am Glass Bridges combines both: a marble race where every glass bridge carries one marble fewer than are still racing (glowing pips);
+  each marble that rolls over uses up a pip, the last one breaks through into a catch-bin.
+- Generator catalogues now list "multiplier gates flood the arena until the glass breaks", "glass tower" and "balls battle down to one winner"
+  as headline modes — every mode is sold with a definite end point ("until …", "down to one …"). → 11-28 pm Multiplier Rain (new
+  multiplier-gates family): three sliding neon gates with PIPS instead of text labels (x2 / x3 / x2); a ball that falls through takes the gate's
+  colour, through all three = gold (x12); the very first ball goes through the gates so the multiplying is clear inside 1 s; the tank fills
+  with colour strata and the floor gives way under the weight.
+- Mode lists keep the same core (escape rings, accumulate, multiply, HP-brick shatter, colour match, portals, increasing bounciness);
+  portals and colour-match are the least used → candidates for a future original twist (e.g. portals that swap two marbles mid-race).
+- Loop Physics posts every few hours with one-line hooks ("One ball becomes chaos – every bounce adds another"), every bounce playing the next
+  note of a public-domain melody, and a "What would you change?" call to action → first comments that ask viewers to change a rule.
+- Learned while building: collapsing a whole bridge drops the tight pack too (3–4 marbles fell at once on the first bridge) — only the spot under
+  the extra marble should give way (a marble-sized hole, the rest of the glass stays). In the position-based solver, moving a freshly split ball
+  sideways must also move its previous position, otherwise the shift turns into a huge sideways speed (clones flew across the tank).
