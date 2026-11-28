@@ -234,3 +234,27 @@ blog, 2026-03-10 (viralballs.com/en/blog/ball-bouncing-simulator-free-online-phy
 - Learned while building: collapsing a whole bridge drops the tight pack too (3–4 marbles fell at once on the first bridge) — only the spot under
   the extra marble should give way (a marble-sized hole, the rest of the glass stays). In the position-based solver, moving a freshly split ball
   sideways must also move its previous position, otherwise the shift turns into a huge sideways speed (clones flew across the tank).
+
+## 2026-11-28 (evening run) — numbers + research
+Sources: Metricool analytics (brand 8158935); Suika++ devlog "a new mode with an enclosing space, variable strength drops and shape swapping"
+(itch.io/devlog/628090/suika-a-new-mode-with-an-enclosing-space-variable-strength-drops-and-shape-swapping); Balls Royale devlog "New version,
+new game mode" (darkcodelight.itch.io/balls-royale/devlog/863797/new-version-new-game-mode); Tabcut "marble racing for the TikTok Creativity
+Program" (tabcut.com/blog/post/i-found-the-perfect-niche-for-tiktok-creativity-program-marble-racing).
+- Numbers (IG): Knockout Duels (marble bracket) = BEST average watch time ever (24.3 s, skip 28.7%, 3,343 views, 3 saves); Lift Laps keeps
+  climbing (6,057 views). Hot Potato got the HIGHEST skip so far (44.9%, 13.0 s) — like Colour Cycle and Pendulum, zero-gravity ring battles
+  lose people in the first 3 s even with an elimination hook; gravity machines/courses hold. YouTube: Glass Floors 1,219 / 11 likes, Gate Race
+  now 1,133 (was 13). TikTok: still 0 views on every post. Marble-race is at 4 of the last 14 → rests tomorrow.
+- Suika++ adds pressure from the ARENA itself (the floor keeps rising unless you merge fast). Our own take: the arena wears out under the
+  balls — every bounce makes the tile thinner (thickness = bounces left, red = last one), last ball still bouncing wins → 11-29 pm Last Bounce
+  (new floor-survival family, three floors, bounce period locked to 2 beats so the landings are the melody).
+- Obstacle-course and marble-race creators stack small sound cues (countdown before the start, a bounce SFX on every hit) and keep the music
+  original/royalty-free — matches our rule: notes on bounces, sfx for actions, own music engine.
+- Chain-reaction variation for the morning (Glass Floors had the most likes): shishi-odoshi tipping cups with VISIBLE counterweights — a cup
+  tips when the balls out-weigh its counterweight (real torque), pours into the next cup, swings back; the basin has the biggest one → 11-29 am
+  Tipping Cups.
+- Learned while building: the lever pivot must sit BELOW the load (with the pivot at mid-height a cup finds a half-tipped balance and never
+  pours), the counterweight hangs a little below the pivot so an empty cup always swings back, and a flared outer wall pours at ~60°. Feed
+  every cup near its outer lip, otherwise the stream hits the back of the tipped cup and flies off. For moving walls decide the side per wall
+  from the ball's previous position (polygon membership pushed balls in the open top out through the wall). Wear-based eliminations cluster
+  at the end; a thin top floor + thicker lower floors spreads the falls, and the landing test must also catch balls pushed into a floor by a
+  collision (they fell through solid tiles).
